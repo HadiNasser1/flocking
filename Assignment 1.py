@@ -2,8 +2,8 @@ import vi
 import random
 
 class CockroachAgent(vi.Agent):
-    def _init_(self):
-        super()._init_()
+    def __init__(self):
+        super().__init__()
         self.state = "Wandering"
         self.timer = 0
 
@@ -33,7 +33,6 @@ class CockroachAgent(vi.Agent):
         elif self.state == "Still":
             # Implement Still state logic
             # Agent remains stationary
-            pass
 
             # Transition to Leaving state based on Pleave probability
             if self.timer % D == 0:
